@@ -50,4 +50,4 @@ test:
 production:
   <<: *default
   database: app_production
-  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
+  password:  <%= Rails.application.credentials.db[:password] %>
